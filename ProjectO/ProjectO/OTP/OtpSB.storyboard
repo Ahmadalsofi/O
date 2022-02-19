@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Otp View Controller-->
+        <scene sceneID="2iu-fn-SXH">
+            <objects>
+                <viewController id="zbb-pm-Ewj" customClass="OtpViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="De0-rD-z23" customClass="GradientView" customModule="ProjectO" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="H73-VE-58B">
+                                <rect key="frame" x="127" y="104" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="51R-Ri-HMC"/>
+                                    <constraint firstAttribute="height" constant="160" id="I53-rE-jaX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Project O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-Yz-fN2">
+                                <rect key="frame" x="95.5" y="280" width="223" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code Verification" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvr-R0-aXx">
+                                <rect key="frame" x="32" y="341" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EnO-he-Je7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VC-ho-Og5">
+                                <rect key="frame" x="16" y="788" width="382" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fvq-Iz-CvC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Verifiey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tsX-He-YvR"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="cvr-R0-aXx" firstAttribute="leading" secondItem="tsX-He-YvR" secondAttribute="leading" constant="32" id="Aoc-ww-xXA"/>
+                            <constraint firstItem="H73-VE-58B" firstAttribute="top" secondItem="tsX-He-YvR" secondAttribute="top" constant="60" id="CRF-3N-2yd"/>
+                            <constraint firstItem="OOr-Yz-fN2" firstAttribute="centerX" secondItem="H73-VE-58B" secondAttribute="centerX" id="LIi-e9-ADd"/>
+                            <constraint firstItem="8VC-ho-Og5" firstAttribute="leading" secondItem="tsX-He-YvR" secondAttribute="leading" constant="16" id="ZJf-4f-hpf"/>
+                            <constraint firstItem="OOr-Yz-fN2" firstAttribute="top" secondItem="H73-VE-58B" secondAttribute="bottom" constant="16" id="cqo-zX-IHf"/>
+                            <constraint firstItem="tsX-He-YvR" firstAttribute="trailing" secondItem="8VC-ho-Og5" secondAttribute="trailing" constant="16" id="hFQ-W4-M22"/>
+                            <constraint firstItem="tsX-He-YvR" firstAttribute="bottom" secondItem="8VC-ho-Og5" secondAttribute="bottom" constant="24" id="mog-Gx-EUX"/>
+                            <constraint firstItem="tsX-He-YvR" firstAttribute="trailing" secondItem="cvr-R0-aXx" secondAttribute="trailing" constant="32" id="oRv-d0-HIQ"/>
+                            <constraint firstItem="H73-VE-58B" firstAttribute="centerX" secondItem="tsX-He-YvR" secondAttribute="centerX" id="uhj-j3-5An"/>
+                            <constraint firstItem="cvr-R0-aXx" firstAttribute="top" secondItem="OOr-Yz-fN2" secondAttribute="bottom" constant="32" id="zlR-rX-c9N"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" systemColor="tintColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemTealColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChF-nO-A17" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appIcon" width="512" height="512"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
