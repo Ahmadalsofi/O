@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Listing Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ListingPageViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="GradientView" customModule="ProjectO" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-8t-uL2">
+                                <rect key="frame" x="0.0" y="146.5" width="414" height="715.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jZ-1U-cVv">
+                                <rect key="frame" x="16" y="60" width="70.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-Oo-mJX">
+                                <rect key="frame" x="16" y="107.5" width="260" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="YAa-Ch-DQL"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Posts"/>
+                                    <segment title="Q &amp; A"/>
+                                </segments>
+                                <color key="tintColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="selectedSegmentTintColor" red="1" green="0.21568627450980393" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didTapSeg:" destination="Y6W-OH-hqX" eventType="valueChanged" id="kiI-j5-tXz"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ANr-Oo-mJX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B3W-rU-ekI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NsO-8t-uL2" secondAttribute="trailing" id="ICn-iX-ixt"/>
+                            <constraint firstItem="NsO-8t-uL2" firstAttribute="top" secondItem="ANr-Oo-mJX" secondAttribute="bottom" constant="8" id="YYh-Cr-t8F"/>
+                            <constraint firstItem="8jZ-1U-cVv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Ypp-1l-VUX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NsO-8t-uL2" secondAttribute="bottom" id="bhx-mB-32D"/>
+                            <constraint firstItem="8jZ-1U-cVv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jSB-dd-R9b"/>
+                            <constraint firstItem="NsO-8t-uL2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oai-Kt-erh"/>
+                            <constraint firstItem="ANr-Oo-mJX" firstAttribute="top" secondItem="8jZ-1U-cVv" secondAttribute="bottom" constant="16" id="xq9-Ls-jcX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="segmentOutlet" destination="ANr-Oo-mJX" id="Vnm-iJ-xqg"/>
+                        <outlet property="tableView" destination="NsO-8t-uL2" id="XF5-fm-mXF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

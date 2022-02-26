@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="joE-tz-fJC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inbox View Controller-->
+        <scene sceneID="QbL-1j-iUR">
+            <objects>
+                <viewController id="joE-tz-fJC" customClass="InboxViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D90-Th-7Ur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yfa-u2-IXa">
+                                <rect key="frame" x="0.0" y="107.5" width="414" height="754.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-Rb-d6x">
+                                <rect key="frame" x="16" y="60" width="65" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bod-8b-ojP"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sW7-Rb-d6x" firstAttribute="top" secondItem="bod-8b-ojP" secondAttribute="top" constant="16" id="2iJ-hV-CJa"/>
+                            <constraint firstItem="Yfa-u2-IXa" firstAttribute="leading" secondItem="bod-8b-ojP" secondAttribute="leading" id="4Xb-pa-eZx"/>
+                            <constraint firstItem="sW7-Rb-d6x" firstAttribute="leading" secondItem="bod-8b-ojP" secondAttribute="leading" constant="16" id="67N-5F-sLf"/>
+                            <constraint firstItem="bod-8b-ojP" firstAttribute="bottom" secondItem="Yfa-u2-IXa" secondAttribute="bottom" id="CN0-1s-g6Q"/>
+                            <constraint firstItem="bod-8b-ojP" firstAttribute="trailing" secondItem="Yfa-u2-IXa" secondAttribute="trailing" id="gXQ-G0-oDS"/>
+                            <constraint firstItem="Yfa-u2-IXa" firstAttribute="top" secondItem="sW7-Rb-d6x" secondAttribute="bottom" constant="16" id="moP-rj-W2x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="Yfa-u2-IXa" id="NhJ-xT-6Nj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o83-Ef-rDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="72"/>
+        </scene>
+    </scenes>
+</document>

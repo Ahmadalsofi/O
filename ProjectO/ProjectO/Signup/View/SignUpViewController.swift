@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.initBackSetup()
         // Do any additional setup after loading the view.
     }
     

@@ -21,7 +21,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapNewUser(_ sender: Any) {
-        self.performSegue(withIdentifier: "SignUp", sender: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SignUpSB", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController()!
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.performSegue(withIdentifier: "SignUp", sender: nil)
     }
     
     @IBAction func didTapLogin(_ sender: Any) {
@@ -48,8 +51,5 @@ class LoginViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }
-        
-        
     }
-    
 }
