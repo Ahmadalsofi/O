@@ -7,5 +7,6 @@ target 'ProjectO' do
 
   # Pods for ProjectO
 pod 'IQKeyboardManagerSwift'
+pod 'MessageKit'
 
 end
