@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,11 +41,48 @@
                     </view>
                     <connections>
                         <outlet property="tableViewOutlet" destination="Yfa-u2-IXa" id="NhJ-xT-6Nj"/>
+                        <segue destination="fSc-xD-NGh" kind="show" identifier="MessagesViewController" id="NuX-ao-QHZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o83-Ef-rDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="72"/>
         </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="5ua-AY-d3U">
+            <objects>
+                <viewController storyboardIdentifier="MessagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fSc-xD-NGh" customClass="MessagesViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="obi-bA-Uxq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-8S-YIm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gx6-uy-yw0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4rZ-8S-YIm" firstAttribute="leading" secondItem="Gx6-uy-yw0" secondAttribute="leading" id="QfI-eE-BaM"/>
+                            <constraint firstItem="Gx6-uy-yw0" firstAttribute="bottom" secondItem="4rZ-8S-YIm" secondAttribute="bottom" constant="60" id="Tyb-Qi-1x8"/>
+                            <constraint firstItem="4rZ-8S-YIm" firstAttribute="top" secondItem="Gx6-uy-yw0" secondAttribute="top" id="gTT-SA-EtG"/>
+                            <constraint firstItem="Gx6-uy-yw0" firstAttribute="trailing" secondItem="4rZ-8S-YIm" secondAttribute="trailing" id="mmg-en-idg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tUe-zd-qgH"/>
+                    <connections>
+                        <outlet property="tableView" destination="4rZ-8S-YIm" id="ve3-0F-Vcl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkO-Mg-pyV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="158"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

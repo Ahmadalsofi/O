@@ -5,22 +5,31 @@ PODS:
   - IQKeyboardManagerSwift (6.5.9)
   - MessageKit (3.7.0):
     - InputBarAccessoryView (~> 5.4.0)
+  - PhoneNumberKit (3.3.3):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.3)
+    - PhoneNumberKit/UIKit (= 3.3.3)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.3)
+  - PhoneNumberKit/UIKit (3.3.3):
+    - PhoneNumberKit/PhoneNumberKitCore
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - MessageKit
+  - PhoneNumberKit (~> 3.3)
 
 SPEC REPOS:
   trunk:
     - InputBarAccessoryView
     - IQKeyboardManagerSwift
     - MessageKit
+    - PhoneNumberKit
 
 SPEC CHECKSUMS:
   InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
+  PhoneNumberKit: 4ce83273551c4d2ae10b7361162f4283dd02835f
 
-PODFILE CHECKSUM: 8ad1b7c5e1f68dc0cccd610057445d7da9bec531
+PODFILE CHECKSUM: d212e21b0c035fcdc45fc2fc68be743c272e3957
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

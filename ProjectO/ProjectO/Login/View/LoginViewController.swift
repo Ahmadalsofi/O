@@ -12,8 +12,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     
-    let email = "omar@gmail.com"
-    let password = "1234"
+    let email = "a@yahoo.com"
+    let password = "1"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +29,38 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapLogin(_ sender: Any) {
-        if (passwordTxt.text?.isEmpty ?? true) {
-            let alert = UIAlertController(title: "Password is empty", message: "", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
         
         if (emailTxt.text?.isEmpty ?? true) {
             let alert = UIAlertController(title: "Email is empty", message: "", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let action = UIAlertAction(title: "OK", style: .default) { _  in
+                self.emailTxt.becomeFirstResponder()
+            }
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }
         
-        if emailTxt.text == email  && passwordTxt.text == password {
+        if (passwordTxt.text?.isEmpty ?? true) {
+            let alert = UIAlertController(title: "Password is empty", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default) { _  in
+                self.passwordTxt.becomeFirstResponder()
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
         
-            // OTP
+      
+        if !isValidEmail(email: emailTxt.text!) {
+            let alert = UIAlertController(title: "The email is invalid", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default) { _  in
+                self.emailTxt.becomeFirstResponder()
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        if emailTxt.text == email  && passwordTxt.text == password {
+            LoginManager.login()
         } else {
             let alert = UIAlertController(title: "email or password is wrong", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -52,4 +68,9 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+}
+func isValidEmail(email: String) -> Bool {
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailPred.evaluate(with: email)
 }

@@ -7,13 +7,41 @@
 
 import UIKit
 
-//post sort by date
+// post sort by date
 // q and a sort by view
 // post reply inbox
-// q and a reply on the q
+// q and a comment instead of reply on the q
 
-// setting
-// post
+
+
+/// add post
+/// show age only for post
+/// add picture,
+/// boom 5 second
+/// boom , permanent  for post
+/// permanent  for question
+
+/// Home post
+// remove image from post and Q & A
+
+
+/// inbox
+// list, head line
+// remove image
+// chat card
+// photo boom , permanen
+// from gallery or from profile
+
+
+/// setting
+// logout
+// nick name
+// photo
+// password
+// phone
+// permission location and country
+
+
 
 
 class ListingPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -44,17 +72,31 @@ class ListingPageViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    @IBAction func didTapAddPost(_ sender: Any) {
+        self.performSegue(withIdentifier: "AddPostViewController", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 
+        if segmentOutlet.selectedSegmentIndex == 0 {
+            return postModelDataSource().count
+        }
+        return qAndAModelDataSource().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingPageTableViewCell") as! ListingPageTableViewCell
         cell.favImage.image = UIImage(systemName: "star")
-        if isQustionSelected {
-            cell.backgroundColor = .lightGray
-        } else {
-            cell.backgroundColor = .clear
+        
+        if segmentOutlet.selectedSegmentIndex == 0 {
+            cell.replyLbl.text = "Comment"
+            cell.postSetup(obj: postModelDataSource()[indexPath.row])
+        }else {
+            cell.postSetup(obj: qAndAModelDataSource()[indexPath.row])
+            cell.replyLbl.text = "Reply"
+        }
+        
+        cell.didTapReplyClosure = {
+            self.routeToReply()
         }
         return cell
     }
@@ -69,6 +111,14 @@ class ListingPageViewController: UIViewController, UITableViewDelegate, UITableV
         }else {
             isQustionSelected = true
             self.tableView.reloadData()
+        }
+    }
+    
+    func routeToReply() {
+        if segmentOutlet.selectedSegmentIndex == 0 {
+            self.performSegue(withIdentifier: "reply", sender: nil)
+        }else {
+            self.performSegue(withIdentifier: "MessagesViewController", sender: nil)
         }
     }
 }

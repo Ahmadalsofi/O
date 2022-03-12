@@ -15,7 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        if LoginManager.isLogin() {
+            tabbar()
+        }
         return true
+    }
+    
+    func tabbar() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let initialViewController = storyboard.instantiateInitialViewController()
+  
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
+
+    func login() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "LoginSB", bundle: nil)
+        let initialViewController = storyboard.instantiateInitialViewController()
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
     }
 
 }

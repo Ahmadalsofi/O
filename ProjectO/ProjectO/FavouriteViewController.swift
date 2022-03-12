@@ -21,6 +21,7 @@ class FavouriteViewController: UIViewController, UITableViewDelegate, UITableVie
         tableViewOutlet.dataSource = self
         self.tabBarItem.title = "Favorite"
         self.tabBarItem.image = UIImage(systemName: "star")
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,6 +31,10 @@ class FavouriteViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingPageTableViewCell") as! ListingPageTableViewCell
         cell.favImage.image = UIImage(systemName: "star.fill")
+        
+        cell.didTapReplyClosure = {
+            self.performSegue(withIdentifier: "reply", sender: nil)
+        }
         return cell
     }
     

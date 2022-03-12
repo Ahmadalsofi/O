@@ -30,11 +30,39 @@
 		3C6F0A0027BF9A5E005C97E4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F09FF27BF9A5E005C97E4 /* SignUpViewModel.swift */; };
 		3C6F0A0427BF9D3E005C97E4 /* OtpSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6F0A0327BF9D3E005C97E4 /* OtpSB.storyboard */; };
 		3C6F0A0627BF9D4D005C97E4 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F0A0527BF9D4D005C97E4 /* OtpViewController.swift */; };
+		3C8B86E027DB665A00A656D0 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86DF27DB665A00A656D0 /* Color.xcassets */; };
+		3C8B86E227DB675500A656D0 /* SOIBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86E127DB675500A656D0 /* SOIBDesignable.swift */; };
+		3C8B86E427DB68B000A656D0 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86E327DB68B000A656D0 /* LoginManager.swift */; };
+		3C8B86E727DB760600A656D0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86E627DB760600A656D0 /* SettingViewController.swift */; };
+		3C8B86E927DB760F00A656D0 /* SettingSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86E827DB760F00A656D0 /* SettingSB.storyboard */; };
+		3C8B86EC27DB8B0700A656D0 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86EB27DB8B0700A656D0 /* PostModel.swift */; };
+		3C8B86EF27DB934D00A656D0 /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86EE27DB934D00A656D0 /* ReplyViewController.swift */; };
+		3C8B86F127DB935700A656D0 /* ReplySB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86F027DB935700A656D0 /* ReplySB.storyboard */; };
+		3C8B86F427DB952500A656D0 /* ReplyHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86F227DB952500A656D0 /* ReplyHeaderTableViewCell.swift */; };
+		3C8B86F527DB952500A656D0 /* ReplyHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86F327DB952500A656D0 /* ReplyHeaderTableViewCell.xib */; };
+		3C8B86F727DB95D700A656D0 /* ReplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86F627DB95D700A656D0 /* ReplyModel.swift */; };
+		3C8B86FA27DB962C00A656D0 /* ReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86F827DB962C00A656D0 /* ReplyTableViewCell.swift */; };
+		3C8B86FB27DB962C00A656D0 /* ReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86F927DB962C00A656D0 /* ReplyTableViewCell.xib */; };
+		3C8B86FD27DBC60900A656D0 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86FC27DBC60900A656D0 /* MainTabViewController.swift */; };
+		3C8B870027DC8E0A00A656D0 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B86FE27DC8E0A00A656D0 /* SettingTableViewCell.swift */; };
+		3C8B870127DC8E0A00A656D0 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B86FF27DC8E0A00A656D0 /* SettingTableViewCell.xib */; };
+		3C8B870427DCB16800A656D0 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B870327DCB16800A656D0 /* PhotosViewController.swift */; };
+		3C8B870627DCB17200A656D0 /* PhotosSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B870527DCB17200A656D0 /* PhotosSB.storyboard */; };
+		3C8B870927DCB21900A656D0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B870727DCB21900A656D0 /* PhotoCollectionViewCell.swift */; };
+		3C8B870A27DCB21900A656D0 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */; };
+		3C8EEBED27D25C4F0032E2BB /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEC27D25C4F0032E2BB /* MessagesViewController.swift */; };
+		3C8EEBF027D25D070032E2BB /* ReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEE27D25D070032E2BB /* ReceiveTableViewCell.swift */; };
+		3C8EEBF127D25D070032E2BB /* ReceiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEF27D25D070032E2BB /* ReceiveTableViewCell.xib */; };
 		3CD3D7B727C8C9AD0033876D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3D7B627C8C9AD0033876D /* BaseViewController.swift */; };
 		3CD3D7BA27C8CBA10033876D /* ListingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3D7B927C8CBA10033876D /* ListingPageViewController.swift */; };
 		3CD3D7BC27C8CBA80033876D /* ListingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD3D7BB27C8CBA80033876D /* ListingPage.storyboard */; };
 		3CD3D7BF27C8CCE90033876D /* ListingPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3D7BD27C8CCE90033876D /* ListingPageTableViewCell.swift */; };
 		3CD3D7C027C8CCE90033876D /* ListingPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD3D7BE27C8CCE90033876D /* ListingPageTableViewCell.xib */; };
+		3CE75E4E27D25E5F00C5DAFC /* SendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE75E4C27D25E5F00C5DAFC /* SendTableViewCell.swift */; };
+		3CE75E4F27D25E5F00C5DAFC /* SendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE75E4D27D25E5F00C5DAFC /* SendTableViewCell.xib */; };
+		3CE75E5227D263A500C5DAFC /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE75E5127D263A500C5DAFC /* MessageDataSource.swift */; };
+		3CE75E5527D269EC00C5DAFC /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE75E5427D269EC00C5DAFC /* AddPostViewController.swift */; };
+		3CE75E5727D269F700C5DAFC /* AddPostSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE75E5627D269F700C5DAFC /* AddPostSB.storyboard */; };
 		B80A8A106CBAB8BF1743E48B /* Pods_ProjectO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA992981A883C45DEFA34A /* Pods_ProjectO.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,11 +94,39 @@
 		3C6F09FF27BF9A5E005C97E4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3C6F0A0327BF9D3E005C97E4 /* OtpSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtpSB.storyboard; sourceTree = "<group>"; };
 		3C6F0A0527BF9D4D005C97E4 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		3C8B86DF27DB665A00A656D0 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		3C8B86E127DB675500A656D0 /* SOIBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOIBDesignable.swift; sourceTree = "<group>"; };
+		3C8B86E327DB68B000A656D0 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		3C8B86E627DB760600A656D0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		3C8B86E827DB760F00A656D0 /* SettingSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingSB.storyboard; sourceTree = "<group>"; };
+		3C8B86EB27DB8B0700A656D0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		3C8B86EE27DB934D00A656D0 /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
+		3C8B86F027DB935700A656D0 /* ReplySB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplySB.storyboard; sourceTree = "<group>"; };
+		3C8B86F227DB952500A656D0 /* ReplyHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3C8B86F327DB952500A656D0 /* ReplyHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		3C8B86F627DB95D700A656D0 /* ReplyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyModel.swift; sourceTree = "<group>"; };
+		3C8B86F827DB962C00A656D0 /* ReplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyTableViewCell.swift; sourceTree = "<group>"; };
+		3C8B86F927DB962C00A656D0 /* ReplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyTableViewCell.xib; sourceTree = "<group>"; };
+		3C8B86FC27DBC60900A656D0 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		3C8B86FE27DC8E0A00A656D0 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		3C8B86FF27DC8E0A00A656D0 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		3C8B870327DCB16800A656D0 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		3C8B870527DCB17200A656D0 /* PhotosSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotosSB.storyboard; sourceTree = "<group>"; };
+		3C8B870727DCB21900A656D0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		3C8EEBEC27D25C4F0032E2BB /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		3C8EEBEE27D25D070032E2BB /* ReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveTableViewCell.swift; sourceTree = "<group>"; };
+		3C8EEBEF27D25D070032E2BB /* ReceiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiveTableViewCell.xib; sourceTree = "<group>"; };
 		3CD3D7B627C8C9AD0033876D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3CD3D7B927C8CBA10033876D /* ListingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPageViewController.swift; sourceTree = "<group>"; };
 		3CD3D7BB27C8CBA80033876D /* ListingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingPage.storyboard; sourceTree = "<group>"; };
 		3CD3D7BD27C8CCE90033876D /* ListingPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPageTableViewCell.swift; sourceTree = "<group>"; };
 		3CD3D7BE27C8CCE90033876D /* ListingPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingPageTableViewCell.xib; sourceTree = "<group>"; };
+		3CE75E4C27D25E5F00C5DAFC /* SendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTableViewCell.swift; sourceTree = "<group>"; };
+		3CE75E4D27D25E5F00C5DAFC /* SendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendTableViewCell.xib; sourceTree = "<group>"; };
+		3CE75E5127D263A500C5DAFC /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		3CE75E5427D269EC00C5DAFC /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		3CE75E5627D269F700C5DAFC /* AddPostSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPostSB.storyboard; sourceTree = "<group>"; };
 		3E3DAC565E969D082AFD6A5C /* Pods-ProjectO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectO.release.xcconfig"; path = "Target Support Files/Pods-ProjectO/Pods-ProjectO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2178BA27C901570008BDA5 /* TabBar.storyboard */,
+				3C8B86FC27DBC60900A656D0 /* MainTabViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -98,9 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				3C2178C127C907580008BDA5 /* InboxViewController.swift */,
+				3C8EEBEC27D25C4F0032E2BB /* MessagesViewController.swift */,
 				3C2178C327C9075F0008BDA5 /* InboxSB.storyboard */,
-				3C2178C527C907D20008BDA5 /* InboxTableViewCell.swift */,
-				3C2178C627C907D20008BDA5 /* InboxTableViewCell.xib */,
+				3C8EEBF227D25D650032E2BB /* Cells */,
+				3CE75E5127D263A500C5DAFC /* MessageDataSource.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -126,6 +184,11 @@
 		3C6F09D527BF92D2005C97E4 /* ProjectO */ = {
 			isa = PBXGroup;
 			children = (
+				3C8B870227DCB15300A656D0 /* Photos */,
+				3C8B86ED27DB933E00A656D0 /* reply */,
+				3C8B86EA27DB8AFC00A656D0 /* DataSource */,
+				3C8B86E527DB758500A656D0 /* SettingView */,
+				3CE75E5327D269DB00C5DAFC /* AddPost */,
 				3C2178C027C9074B0008BDA5 /* Inbox */,
 				3C2178B927C9014D0008BDA5 /* TabBar */,
 				3CD3D7B827C8CB8F0033876D /* ListingPage */,
@@ -141,6 +204,9 @@
 				3C6F09E427BF92D3005C97E4 /* Info.plist */,
 				3C2178BC27C905010008BDA5 /* FavouriteViewController.swift */,
 				3C2178BE27C9050C0008BDA5 /* FavouriteSB.storyboard */,
+				3C8B86DF27DB665A00A656D0 /* Color.xcassets */,
+				3C8B86E127DB675500A656D0 /* SOIBDesignable.swift */,
+				3C8B86E327DB68B000A656D0 /* LoginManager.swift */,
 			);
 			path = ProjectO;
 			sourceTree = "<group>";
@@ -201,6 +267,63 @@
 			path = OTP;
 			sourceTree = "<group>";
 		};
+		3C8B86E527DB758500A656D0 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B86E627DB760600A656D0 /* SettingViewController.swift */,
+				3C8B86E827DB760F00A656D0 /* SettingSB.storyboard */,
+				3C8B86FE27DC8E0A00A656D0 /* SettingTableViewCell.swift */,
+				3C8B86FF27DC8E0A00A656D0 /* SettingTableViewCell.xib */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		3C8B86EA27DB8AFC00A656D0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B86EB27DB8B0700A656D0 /* PostModel.swift */,
+				3C8B86F627DB95D700A656D0 /* ReplyModel.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3C8B86ED27DB933E00A656D0 /* reply */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B86EE27DB934D00A656D0 /* ReplyViewController.swift */,
+				3C8B86F027DB935700A656D0 /* ReplySB.storyboard */,
+				3C8B86F227DB952500A656D0 /* ReplyHeaderTableViewCell.swift */,
+				3C8B86F327DB952500A656D0 /* ReplyHeaderTableViewCell.xib */,
+				3C8B86F827DB962C00A656D0 /* ReplyTableViewCell.swift */,
+				3C8B86F927DB962C00A656D0 /* ReplyTableViewCell.xib */,
+			);
+			path = reply;
+			sourceTree = "<group>";
+		};
+		3C8B870227DCB15300A656D0 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B870327DCB16800A656D0 /* PhotosViewController.swift */,
+				3C8B870527DCB17200A656D0 /* PhotosSB.storyboard */,
+				3C8B870727DCB21900A656D0 /* PhotoCollectionViewCell.swift */,
+				3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		3C8EEBF227D25D650032E2BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C2178C527C907D20008BDA5 /* InboxTableViewCell.swift */,
+				3C2178C627C907D20008BDA5 /* InboxTableViewCell.xib */,
+				3C8EEBEE27D25D070032E2BB /* ReceiveTableViewCell.swift */,
+				3C8EEBEF27D25D070032E2BB /* ReceiveTableViewCell.xib */,
+				3CE75E4C27D25E5F00C5DAFC /* SendTableViewCell.swift */,
+				3CE75E4D27D25E5F00C5DAFC /* SendTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3CD3D7B827C8CB8F0033876D /* ListingPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +341,15 @@
 				3CD3D7BE27C8CCE90033876D /* ListingPageTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3CE75E5327D269DB00C5DAFC /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				3CE75E5427D269EC00C5DAFC /* AddPostViewController.swift */,
+				3CE75E5627D269F700C5DAFC /* AddPostSB.storyboard */,
+			);
+			path = AddPost;
 			sourceTree = "<group>";
 		};
 		6B739EB1FAAEA4ECC93064F2 /* Pods */ = {
@@ -298,15 +430,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C6F09E327BF92D3005C97E4 /* LaunchScreen.storyboard in Resources */,
+				3CE75E4F27D25E5F00C5DAFC /* SendTableViewCell.xib in Resources */,
 				3C2178BB27C901570008BDA5 /* TabBar.storyboard in Resources */,
 				3C6F0A0427BF9D3E005C97E4 /* OtpSB.storyboard in Resources */,
+				3C8B86F127DB935700A656D0 /* ReplySB.storyboard in Resources */,
+				3C8B870127DC8E0A00A656D0 /* SettingTableViewCell.xib in Resources */,
+				3C8EEBF127D25D070032E2BB /* ReceiveTableViewCell.xib in Resources */,
+				3C8B870A27DCB21900A656D0 /* PhotoCollectionViewCell.xib in Resources */,
 				3C2178C427C9075F0008BDA5 /* InboxSB.storyboard in Resources */,
 				3C6F09E027BF92D3005C97E4 /* Assets.xcassets in Resources */,
+				3C8B86F527DB952500A656D0 /* ReplyHeaderTableViewCell.xib in Resources */,
 				3C6F09DE27BF92D2005C97E4 /* Main.storyboard in Resources */,
+				3C8B86FB27DB962C00A656D0 /* ReplyTableViewCell.xib in Resources */,
+				3C8B870627DCB17200A656D0 /* PhotosSB.storyboard in Resources */,
 				3C2178C827C907D20008BDA5 /* InboxTableViewCell.xib in Resources */,
+				3C8B86E027DB665A00A656D0 /* Color.xcassets in Resources */,
 				3C6F09F027BF93AA005C97E4 /* LoginSB.storyboard in Resources */,
+				3CE75E5727D269F700C5DAFC /* AddPostSB.storyboard in Resources */,
 				3CD3D7BC27C8CBA80033876D /* ListingPage.storyboard in Resources */,
 				3C6F09FC27BF9A4C005C97E4 /* SignUpSB.storyboard in Resources */,
+				3C8B86E927DB760F00A656D0 /* SettingSB.storyboard in Resources */,
 				3CD3D7C027C8CCE90033876D /* ListingPageTableViewCell.xib in Resources */,
 				3C2178BF27C9050C0008BDA5 /* FavouriteSB.storyboard in Resources */,
 			);
@@ -361,22 +504,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE75E4E27D25E5F00C5DAFC /* SendTableViewCell.swift in Sources */,
 				3C6F0A0627BF9D4D005C97E4 /* OtpViewController.swift in Sources */,
+				3C8B86F427DB952500A656D0 /* ReplyHeaderTableViewCell.swift in Sources */,
 				3C6F09F227BF93B7005C97E4 /* LoginViewController.swift in Sources */,
+				3C8B86EF27DB934D00A656D0 /* ReplyViewController.swift in Sources */,
+				3C8B86FD27DBC60900A656D0 /* MainTabViewController.swift in Sources */,
 				3C6F09FA27BF9A42005C97E4 /* SignUpViewController.swift in Sources */,
+				3C8B86E227DB675500A656D0 /* SOIBDesignable.swift in Sources */,
+				3C8EEBED27D25C4F0032E2BB /* MessagesViewController.swift in Sources */,
 				3C6F09EE27BF93A0005C97E4 /* LoginModel.swift in Sources */,
 				3C2178BD27C905010008BDA5 /* FavouriteViewController.swift in Sources */,
 				3C6F09FE27BF9A55005C97E4 /* SignUpModel.swift in Sources */,
 				3C2178C727C907D20008BDA5 /* InboxTableViewCell.swift in Sources */,
+				3C8B86F727DB95D700A656D0 /* ReplyModel.swift in Sources */,
 				3C6F0A0027BF9A5E005C97E4 /* SignUpViewModel.swift in Sources */,
+				3C8B86E727DB760600A656D0 /* SettingViewController.swift in Sources */,
 				3C6F09F627BF953B005C97E4 /* GradientView.swift in Sources */,
+				3C8B870427DCB16800A656D0 /* PhotosViewController.swift in Sources */,
 				3C6F09EC27BF9395005C97E4 /* LoginViewModel.swift in Sources */,
+				3C8B86E427DB68B000A656D0 /* LoginManager.swift in Sources */,
+				3C8B870927DCB21900A656D0 /* PhotoCollectionViewCell.swift in Sources */,
+				3C8EEBF027D25D070032E2BB /* ReceiveTableViewCell.swift in Sources */,
+				3CE75E5527D269EC00C5DAFC /* AddPostViewController.swift in Sources */,
 				3CD3D7BA27C8CBA10033876D /* ListingPageViewController.swift in Sources */,
+				3CE75E5227D263A500C5DAFC /* MessageDataSource.swift in Sources */,
 				3C2178C227C907580008BDA5 /* InboxViewController.swift in Sources */,
 				3C6F09DB27BF92D2005C97E4 /* ViewController.swift in Sources */,
+				3C8B870027DC8E0A00A656D0 /* SettingTableViewCell.swift in Sources */,
+				3C8B86EC27DB8B0700A656D0 /* PostModel.swift in Sources */,
 				3CD3D7B727C8C9AD0033876D /* BaseViewController.swift in Sources */,
 				3C6F09D727BF92D2005C97E4 /* AppDelegate.swift in Sources */,
 				3CD3D7BF27C8CCE90033876D /* ListingPageTableViewCell.swift in Sources */,
+				3C8B86FA27DB962C00A656D0 /* ReplyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +690,7 @@
 				INFOPLIST_FILE = ProjectO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginSB;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -559,7 +719,7 @@
 				INFOPLIST_FILE = ProjectO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginSB;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SendTableViewCell" rowHeight="98" id="ffU-DQ-iFZ" customClass="SendTableViewCell" customModule="ProjectO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffU-DQ-iFZ" id="abZ-dQ-h57">
+                <rect key="frame" x="0.0" y="0.0" width="432" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYP-5z-SJh">
+                        <rect key="frame" x="12" y="4" width="380" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqg-Gs-5NV">
+                                <rect key="frame" x="4" y="4" width="372" height="82"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.47647742113549685" blue="0.2045934278525271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tqg-Gs-5NV" secondAttribute="bottom" constant="4" id="0NV-lC-KGx"/>
+                            <constraint firstAttribute="trailing" secondItem="Tqg-Gs-5NV" secondAttribute="trailing" constant="4" id="hZy-ze-MsZ"/>
+                            <constraint firstItem="Tqg-Gs-5NV" firstAttribute="leading" secondItem="SYP-5z-SJh" secondAttribute="leading" constant="4" id="uyC-w5-Jz4"/>
+                            <constraint firstItem="Tqg-Gs-5NV" firstAttribute="top" secondItem="SYP-5z-SJh" secondAttribute="top" constant="4" id="wYA-1J-4uq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="SYP-5z-SJh" secondAttribute="bottom" constant="4" id="Tlg-Yh-iz2"/>
+                    <constraint firstAttribute="trailing" secondItem="SYP-5z-SJh" secondAttribute="trailing" constant="40" id="hnd-iN-e9O"/>
+                    <constraint firstItem="SYP-5z-SJh" firstAttribute="leading" secondItem="abZ-dQ-h57" secondAttribute="leading" constant="12" id="p08-Yy-ofn"/>
+                    <constraint firstItem="SYP-5z-SJh" firstAttribute="top" secondItem="abZ-dQ-h57" secondAttribute="top" constant="4" id="udf-nJ-MfE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="uGF-ZT-SDh"/>
+            <connections>
+                <outlet property="contentViewOutLet" destination="SYP-5z-SJh" id="XWS-o4-86f"/>
+                <outlet property="titleLabel" destination="Tqg-Gs-5NV" id="ohM-23-hNj"/>
+            </connections>
+            <point key="canvasLocation" x="248" y="17"/>
+        </tableViewCell>
+    </objects>
+</document>

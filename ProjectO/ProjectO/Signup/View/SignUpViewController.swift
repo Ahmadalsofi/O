@@ -6,24 +6,68 @@
 //
 
 import UIKit
-
-class SignUpViewController: BaseViewController {
-
+import PhoneNumberKit
+import ContactsUI
+class SignUpViewController: BaseViewController, CNContactPickerDelegate {
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var passwordConfTxt: UITextField!
+    
+    @IBOutlet weak var phoneTxt: PhoneNumberTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initBackSetup()
-        // Do any additional setup after loading the view.
+        if #available(iOS 11.0, *) {
+            PhoneNumberKit.CountryCodePicker.commonCountryCodes = ["US", "CA", "MX", "AU", "GB", "DE"]
+        }
+        
+        self.phoneTxt.withPrefix = true
+        self.phoneTxt.withFlag = true
+        self.phoneTxt.withExamplePlaceholder = true
+        self.phoneTxt.withDefaultPickerUI = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapSignup(_ sender: Any) {
+        if emailTxt.text?.isEmpty ?? true {
+            alert(text: "Email is empty", textField: emailTxt)
+            return
+        }
+        
+        if passwordTxt.text?.isEmpty ?? true {
+            alert(text: "Password is empty", textField: passwordTxt)
+            return
+        }
+        
+        if passwordConfTxt.text?.isEmpty ?? true {
+           alert(text: "Confirm Password is empty", textField: passwordTxt)
+            return
+        }
+        
+        if phoneTxt.text?.isEmpty ?? true {
+            alert(text: "Phone is empty", textField: phoneTxt)
+            
+            return
+        }
+        
+        if passwordTxt.text != passwordConfTxt.text {
+            alert(text: "password and confirm password does not match", textField: passwordTxt)
+            return
+        }
+        
+        if !phoneTxt.isValidNumber {
+            alert(text: "Phone number is invalid", textField: phoneTxt)
+            return
+        }
+        
+        if !isValidEmail(email: emailTxt.text!) {
+            alert(text: "The email is invalid", textField: emailTxt)
+        }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "OtpSB", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController()!
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
-
 }
+

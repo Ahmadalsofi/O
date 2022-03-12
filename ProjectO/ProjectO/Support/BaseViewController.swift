@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
         let image = UIImage(systemName: "arrow.backward")
         
         button.setImage(image, for: .normal)
-        button.tintColor = UIColor.white
+        button.tintColor = UIColor.black
         button.addTarget(self, action: #selector(popBack), for: .touchUpInside)
         return button
     }
@@ -35,6 +35,15 @@ class BaseViewController: UIViewController {
         let backBarButton = UIBarButtonItem(customView: backButton)
         backBarButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = backBarButton
+    }
+    
+    func alert(text: String,textField: UITextField) {
+        let alert = UIAlertController(title: text, message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { _  in
+            textField.becomeFirstResponder()
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -67,5 +76,12 @@ extension NSObject {
     /// - Note: Used to return the className as String value
     class var className: String {
         return "\(self)"
+    }
+}
+extension UICollectionViewCell {
+    /// - Note: Used to Register cell to the passed collectionView
+    /// - Warning: Name Of the class should be the same as the name of Cell Identifier
+    class func register(on collectionView: UICollectionView) {
+        collectionView.register(UINib(nibName: self.className, bundle: nil), forCellWithReuseIdentifier: self.className)
     }
 }

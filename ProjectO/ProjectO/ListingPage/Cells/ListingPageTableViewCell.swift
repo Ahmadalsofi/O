@@ -14,6 +14,12 @@ class ListingPageTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var favImage: UIImageView!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+    
+    var didTapReplyClosure: (()-> Void)?
+    
+    @IBOutlet weak var replyLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +30,21 @@ class ListingPageTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
+    @IBAction func didTapReply(_ sender: Any) {
+        didTapReplyClosure?()
+    }
+    
+    
+    func postSetup(obj: PostModel) {
+        titleLbl.text = obj.title
+        detailsLbl.text = obj.body
+        viewLabel.text = obj.views! + " Views"
+        
+        let df = DateFormatter()
+        df.dateFormat = "MM/dd hh:mm"
+        let now = df.string(from: obj.date!)
+        dateLbl.text = now
+    }
 }

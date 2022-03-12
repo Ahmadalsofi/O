@@ -4,15 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Listing Page View Controller-->
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ListingPageViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="Y6W-OH-hqX" customClass="ListingPageViewController" customModule="ProjectO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="GradientView" customModule="ProjectO" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,19 +38,31 @@
                                     <segment title="Q &amp; A"/>
                                 </segments>
                                 <color key="tintColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="selectedSegmentTintColor" red="1" green="0.21568627450980393" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="selectedSegmentTintColor" name="border"/>
                                 <connections>
                                     <action selector="didTapSeg:" destination="Y6W-OH-hqX" eventType="valueChanged" id="kiI-j5-tXz"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-Nz-PrJ">
+                                <rect key="frame" x="366" y="108.5" width="32" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="didTapAddPost:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dbe-j8-1PP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ANr-Oo-mJX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B3W-rU-ekI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NsO-8t-uL2" secondAttribute="trailing" id="ICn-iX-ixt"/>
+                            <constraint firstItem="NsO-8t-uL2" firstAttribute="top" secondItem="urJ-Nz-PrJ" secondAttribute="bottom" constant="8" id="TTc-7u-iCi"/>
                             <constraint firstItem="NsO-8t-uL2" firstAttribute="top" secondItem="ANr-Oo-mJX" secondAttribute="bottom" constant="8" id="YYh-Cr-t8F"/>
                             <constraint firstItem="8jZ-1U-cVv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Ypp-1l-VUX"/>
+                            <constraint firstAttribute="trailing" secondItem="urJ-Nz-PrJ" secondAttribute="trailing" constant="16" id="aDy-F0-eyS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NsO-8t-uL2" secondAttribute="bottom" id="bhx-mB-32D"/>
                             <constraint firstItem="8jZ-1U-cVv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jSB-dd-R9b"/>
                             <constraint firstItem="NsO-8t-uL2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oai-Kt-erh"/>
@@ -64,17 +77,54 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="VVc-1a-IXb"/>
                     <connections>
                         <outlet property="segmentOutlet" destination="ANr-Oo-mJX" id="Vnm-iJ-xqg"/>
                         <outlet property="tableView" destination="NsO-8t-uL2" id="XF5-fm-mXF"/>
+                        <segue destination="zhr-a6-qUc" kind="show" identifier="reply" id="BFy-h3-nDr"/>
+                        <segue destination="a2s-us-D34" kind="show" identifier="MessagesViewController" id="7xZ-gX-Nxr"/>
+                        <segue destination="VcV-Vh-hje" kind="show" identifier="AddPostViewController" id="sYQ-BQ-fXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="72"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="71.651785714285708"/>
+        </scene>
+        <!--AddPostSB-->
+        <scene sceneID="vYU-VC-igJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPostSB" id="VcV-Vh-hje" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XPd-2S-2a0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlY-Y1-2aQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="-36"/>
+        </scene>
+        <!--MessagesViewController-->
+        <scene sceneID="tTw-NB-7zR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InboxSB" referencedIdentifier="MessagesViewController" id="a2s-us-D34" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JCP-g5-EbH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bR2-P1-QkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="9"/>
+        </scene>
+        <!--ReplySB-->
+        <scene sceneID="TFM-UF-ogh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReplySB" id="zhr-a6-qUc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dfD-EE-7HC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQZ-bE-Qtc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="65"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="border">
+            <color red="0.0" green="0.74509803921568629" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
