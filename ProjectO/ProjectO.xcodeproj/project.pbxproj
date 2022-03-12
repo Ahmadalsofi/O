@@ -50,6 +50,8 @@
 		3C8B870627DCB17200A656D0 /* PhotosSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B870527DCB17200A656D0 /* PhotosSB.storyboard */; };
 		3C8B870927DCB21900A656D0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B870727DCB21900A656D0 /* PhotoCollectionViewCell.swift */; };
 		3C8B870A27DCB21900A656D0 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */; };
+		3C8B870D27DCC87900A656D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B870C27DCC87900A656D0 /* ProfileViewController.swift */; };
+		3C8B870F27DCC88000A656D0 /* ProfileSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8B870E27DCC88000A656D0 /* ProfileSB.storyboard */; };
 		3C8EEBED27D25C4F0032E2BB /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEC27D25C4F0032E2BB /* MessagesViewController.swift */; };
 		3C8EEBF027D25D070032E2BB /* ReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEE27D25D070032E2BB /* ReceiveTableViewCell.swift */; };
 		3C8EEBF127D25D070032E2BB /* ReceiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8EEBEF27D25D070032E2BB /* ReceiveTableViewCell.xib */; };
@@ -114,6 +116,8 @@
 		3C8B870527DCB17200A656D0 /* PhotosSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotosSB.storyboard; sourceTree = "<group>"; };
 		3C8B870727DCB21900A656D0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		3C8B870C27DCC87900A656D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3C8B870E27DCC88000A656D0 /* ProfileSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileSB.storyboard; sourceTree = "<group>"; };
 		3C8EEBEC27D25C4F0032E2BB /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		3C8EEBEE27D25D070032E2BB /* ReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		3C8EEBEF27D25D070032E2BB /* ReceiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		3C6F09D527BF92D2005C97E4 /* ProjectO */ = {
 			isa = PBXGroup;
 			children = (
+				3C8B870B27DCC86A00A656D0 /* Profile */,
 				3C8B870227DCB15300A656D0 /* Photos */,
 				3C8B86ED27DB933E00A656D0 /* reply */,
 				3C8B86EA27DB8AFC00A656D0 /* DataSource */,
@@ -309,6 +314,15 @@
 				3C8B870827DCB21900A656D0 /* PhotoCollectionViewCell.xib */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		3C8B870B27DCC86A00A656D0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B870C27DCC87900A656D0 /* ProfileViewController.swift */,
+				3C8B870E27DCC88000A656D0 /* ProfileSB.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		3C8EEBF227D25D650032E2BB /* Cells */ = {
@@ -438,6 +452,7 @@
 				3C8EEBF127D25D070032E2BB /* ReceiveTableViewCell.xib in Resources */,
 				3C8B870A27DCB21900A656D0 /* PhotoCollectionViewCell.xib in Resources */,
 				3C2178C427C9075F0008BDA5 /* InboxSB.storyboard in Resources */,
+				3C8B870F27DCC88000A656D0 /* ProfileSB.storyboard in Resources */,
 				3C6F09E027BF92D3005C97E4 /* Assets.xcassets in Resources */,
 				3C8B86F527DB952500A656D0 /* ReplyHeaderTableViewCell.xib in Resources */,
 				3C6F09DE27BF92D2005C97E4 /* Main.storyboard in Resources */,
@@ -528,6 +543,7 @@
 				3C8EEBF027D25D070032E2BB /* ReceiveTableViewCell.swift in Sources */,
 				3CE75E5527D269EC00C5DAFC /* AddPostViewController.swift in Sources */,
 				3CD3D7BA27C8CBA10033876D /* ListingPageViewController.swift in Sources */,
+				3C8B870D27DCC87900A656D0 /* ProfileViewController.swift in Sources */,
 				3CE75E5227D263A500C5DAFC /* MessageDataSource.swift in Sources */,
 				3C2178C227C907580008BDA5 /* InboxViewController.swift in Sources */,
 				3C6F09DB27BF92D2005C97E4 /* ViewController.swift in Sources */,

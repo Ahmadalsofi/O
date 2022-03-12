@@ -10,7 +10,7 @@ import CoreLocation
 
 enum SettingType {
     case logout
-    case phoneNumber
+    case profile
     case location
     case photos
 }
@@ -28,7 +28,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var locationManager: CLLocationManager?
     
-    var data: [SettingType] = [.phoneNumber, .location, .photos, .logout]
+    var data: [SettingType] = [.profile, .location, .photos, .logout]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +52,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch data[indexPath.row] {
         case .logout:
             cell.titleLbl.text = "Logout"
-        case .phoneNumber:
-            cell.titleLbl.text = "Phone"
+        case .profile:
+            cell.titleLbl.text = "Profile"
         case .location:
             cell.detailsLbl.isHidden = false
             cell.titleLbl.text = "Location"
@@ -73,8 +73,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch data[indexPath.row] {
         case .logout:
             LoginManager.logout()
-        case .phoneNumber:
-            break
+        case .profile:
+            self.performSegue(withIdentifier: "profile", sender: nil)
         case .location:
             break
         case .photos:

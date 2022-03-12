@@ -51,6 +51,7 @@
                     <connections>
                         <outlet property="tableView" destination="Vlg-U7-9aT" id="dSh-Kb-43e"/>
                         <segue destination="rA1-XC-ow2" kind="show" identifier="PhotosViewController" id="U2W-fX-0QM"/>
+                        <segue destination="q4g-KT-NEZ" kind="show" identifier="profile" id="gMc-cn-W59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMe-ed-W8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,6 +67,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7P-aX-m2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1609" y="-41"/>
+        </scene>
+        <!--ProfileSB-->
+        <scene sceneID="wdo-cs-KeS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileSB" id="q4g-KT-NEZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tpl-Xc-Zq3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwd-JZ-g7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="43"/>
         </scene>
     </scenes>
     <resources>
