@@ -63,10 +63,23 @@ class SignUpViewController: BaseViewController, CNContactPickerDelegate {
         
         if !isValidEmail(email: emailTxt.text!) {
             alert(text: "The email is invalid", textField: emailTxt)
+            return
+        }
+        
+        let data = UserDefaultManager.retriveLoginData()
+       
+        if data.contains(where: { $0.email == emailTxt.text! }) {
+            alert(text: "Email Already exists", textField: emailTxt)
+            return
         }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "OtpSB", bundle: nil)
-        let vc = storyBoard.instantiateInitialViewController()!
+        let vc = storyBoard.instantiateInitialViewController() as! OtpViewController
+        let dataNew = UserSignUpModel()
+        dataNew.email = self.emailTxt.text!
+        dataNew.password = self.passwordTxt.text!
+        dataNew.phone = self.phoneTxt.text!
+        vc.userSignUpModel = dataNew
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

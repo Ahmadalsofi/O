@@ -38,6 +38,14 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
+        
+        
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+
+        self.title = "Setting"
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,14 +86,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         case .location:
             break
         case .photos:
-            self.performSegue(withIdentifier: "PhotosViewController", sender: nil)
-
+            let vc = UIStoryboard.init(name: "PhotosSB", bundle: Bundle.main).instantiateInitialViewController() as? PhotosViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
         
     }
     
     
-  
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways {

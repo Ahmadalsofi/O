@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eMr-Se-zOs">
-                                <rect key="frame" x="16" y="113" width="382" height="749"/>
+                                <rect key="frame" x="16" y="96" width="382" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M9W-DU-Y2T">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M9W-DU-Y2T">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,66 +38,70 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-V5-B34">
-                                <rect key="frame" x="16" y="60" width="83" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNb-J8-HlV">
-                                <rect key="frame" x="353" y="60" width="45" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-lb-p2d">
+                                <rect key="frame" x="8" y="804" width="398" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="GLY-jB-50H"/>
-                                    <constraint firstAttribute="height" constant="45" id="SIi-42-QF8"/>
+                                    <constraint firstAttribute="height" constant="50" id="4ky-Hq-V0h"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="multiply.circle" catalog="system"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="didTapClose:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0wx-BC-iqd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHQ-YR-LMv">
-                                <rect key="frame" x="300" y="60" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4hT-W4-YD5"/>
-                                    <constraint firstAttribute="width" constant="45" id="jy9-Tw-udQ"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="didTapAdd:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y9D-NK-zGi"/>
+                                    <action selector="didTapDone:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RT0-Ml-qLQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CNb-J8-HlV" firstAttribute="leading" secondItem="UHQ-YR-LMv" secondAttribute="trailing" constant="8" id="4ET-et-RhK"/>
-                            <constraint firstItem="UHQ-YR-LMv" firstAttribute="centerY" secondItem="CNb-J8-HlV" secondAttribute="centerY" id="5Qp-rz-gfl"/>
-                            <constraint firstItem="lGb-V5-B34" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B8e-6p-3Dm"/>
-                            <constraint firstItem="eMr-Se-zOs" firstAttribute="top" secondItem="CNb-J8-HlV" secondAttribute="bottom" constant="8" id="DH6-Mu-YgB"/>
-                            <constraint firstItem="lGb-V5-B34" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Gb0-Na-JI2"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CNb-J8-HlV" secondAttribute="trailing" constant="16" id="Lzm-NV-dh2"/>
+                            <constraint firstItem="P8t-lb-p2d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Noh-nz-tyT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eMr-Se-zOs" secondAttribute="trailing" constant="16" id="REe-bb-ylm"/>
                             <constraint firstItem="eMr-Se-zOs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="RfT-oT-CH8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eMr-Se-zOs" secondAttribute="bottom" id="cVN-jm-g3R"/>
-                            <constraint firstItem="CNb-J8-HlV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="ruI-dM-PcF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P8t-lb-p2d" secondAttribute="trailing" constant="8" id="YBy-Xi-tN9"/>
+                            <constraint firstItem="eMr-Se-zOs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="rgf-DC-nmd"/>
+                            <constraint firstItem="P8t-lb-p2d" firstAttribute="top" secondItem="eMr-Se-zOs" secondAttribute="bottom" constant="8" id="tmL-VU-86r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="P8t-lb-p2d" secondAttribute="bottom" constant="8" id="ygZ-Hp-x6w"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mYx-7K-4X2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rlZ-rf-fZy">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapAdd:" destination="Y6W-OH-hqX" id="SSR-pd-wf8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="eMr-Se-zOs" id="Pac-EB-TXg"/>
+                        <outlet property="doneBtn" destination="P8t-lb-p2d" id="cZv-r9-1aX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zQP-xh-F0Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T5R-yY-usq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="law-IA-73S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="9uO-Iw-bb3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tl-QM-PGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
-        <image name="multiply.circle" catalog="system" width="128" height="121"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,14 @@
 
 import UIKit
 
+
+// reply for post
+// comment for q and a
+// reply page title should be the title of post
+
+
+
+
 // post sort by date
 // q and a sort by view
 // post reply inbox
@@ -45,9 +53,10 @@ import UIKit
 
 
 class ListingPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var segmentOutlet: UISegmentedControl!
     
+    @IBOutlet weak var sortBtn: UIButton!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             ListingPageTableViewCell.register(on: tableView)
@@ -56,31 +65,45 @@ class ListingPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     var isQustionSelected = false
     
+    var selectedCategory  = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        segmentOutlet.setTitle(homePost, forSegmentAt: 0)
+        segmentOutlet.setTitle(homeQAndA, forSegmentAt: 1)
+
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         tableView.delegate = self
         tableView.dataSource = self
-        self.tabBarItem.title = "Home"
+        self.title = homeTitle
+        self.tabBarItem.title = homeTab
         self.tabBarItem.image = UIImage(systemName: "house")
         
         if #available(iOS 13.0, *) {
             let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
             segmentOutlet.setTitleTextAttributes(titleTextAttributes, for:.normal)
-
+            
             let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
             segmentOutlet.setTitleTextAttributes(titleTextAttributes1, for:.selected)
         }
     }
     
-    @IBAction func didTapAddPost(_ sender: Any) {
-        self.performSegue(withIdentifier: "AddPostViewController", sender: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentOutlet.selectedSegmentIndex == 0 {
-            return postModelDataSource().count
+            return postData().count
         }
-        return qAndAModelDataSource().count
+        return QustionDefaultManager.retriveQustionModel().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,37 +111,114 @@ class ListingPageViewController: UIViewController, UITableViewDelegate, UITableV
         cell.favImage.image = UIImage(systemName: "star")
         
         if segmentOutlet.selectedSegmentIndex == 0 {
-            cell.replyLbl.text = "Comment"
-            cell.postSetup(obj: postModelDataSource()[indexPath.row])
-        }else {
-            cell.postSetup(obj: qAndAModelDataSource()[indexPath.row])
             cell.replyLbl.text = "Reply"
+            cell.postSetup(obj: postData()[indexPath.row])
+            cell.images = postData()[indexPath.row].images ?? []
+            cell.collectionView.reloadData()
+            //  cell.collectionView.isHidden = false
+        }else {
+            cell.replyLbl.text = "Comment"
+            cell.postSetup(obj: QustionDefaultManager.retriveQustionModel()[indexPath.row])
+            //   cell.collectionView.isHidden = true
         }
         
         cell.didTapReplyClosure = {
-            self.routeToReply()
+            self.routeToReply(index: indexPath.row)
+        }
+        
+        cell.didTapFavClosure = {
+            FavDefaultManager.create(post:FavModel(postID: self.postData()[indexPath.row].id, email: LoginManager.currentEmail()))
+        }
+        
+        cell.didTapImage = {
+            self.performSegue(withIdentifier: "Slide", sender: indexPath.row)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableView.frame.height / 3
+        return UITableView.automaticDimension
     }
     @IBAction func didTapSeg(_ sender: Any) {
         if self.segmentOutlet.selectedSegmentIndex == 0 {
             isQustionSelected = false
+            self.sortBtn.isHidden = false
             self.tableView.reloadData()
         }else {
+            self.sortBtn.isHidden = true
             isQustionSelected = true
             self.tableView.reloadData()
         }
     }
     
-    func routeToReply() {
-        if segmentOutlet.selectedSegmentIndex == 0 {
-            self.performSegue(withIdentifier: "reply", sender: nil)
+    func postData() -> [PostModel]  {
+        if selectedCategory.isEmpty {
+            return PostDefaultManager.retrivePosts()
         }else {
+            let data = PostDefaultManager.retrivePosts()
+            return data.filter({ $0.category == selectedCategory })
+        }
+    }
+    
+    @IBAction func didTapSort(_ sender: Any) {
+        let alert = UIAlertController(title: "Categories", message: "Please Select an Option", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "All", style: .default , handler:{ (UIAlertAction) in
+            self.selectedCategory = ""
+            self.tableView.reloadData()
+        }))
+        
+        for i in categories {
+            alert.addAction(UIAlertAction(title: i, style: .default , handler:{ (UIAlertAction) in
+                self.selectedCategory = i
+                self.sortBtn.setTitle("Sorted By (\(i))", for: .normal)
+                self.tableView.reloadData()
+            }))
+        }
+        
+        let ac = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(ac)
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
+    func routeToReply(index: Int) {
+        if segmentOutlet.selectedSegmentIndex == 0 {
             self.performSegue(withIdentifier: "MessagesViewController", sender: nil)
+        }else {
+            self.performSegue(withIdentifier: "reply", sender: index)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "reply" {
+            let index = sender as! Int
+            let vc = segue.destination as! ReplyViewController
+            vc.postModel = self.postData()[index]
+        }
+        
+        if segue.identifier == "Slide" {
+            let index = sender as! Int
+            let vc = segue.destination as! ImagesSlideViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.images = self.postData()[index].images
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //PostDetailsViewController
+        if segmentOutlet.selectedSegmentIndex == 0 {
+            let vc = UIStoryboard.init(name: "PostDetailsSB", bundle: Bundle.main).instantiateViewController(withIdentifier: "PostDetailsViewController") as? PostDetailsViewController
+            vc?.postModel = self.postData()[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }else {
+            
+            let vc = UIStoryboard.init(name: "ReplySB", bundle: Bundle.main).instantiateInitialViewController() as? ReplyViewController
+            vc?.postModel = self.postData()[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
 }

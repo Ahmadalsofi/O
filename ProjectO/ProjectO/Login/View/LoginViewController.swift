@@ -12,10 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     
-    let email = "a@yahoo.com"
-    let password = "1"
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +35,7 @@ class LoginViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }
-        
+
         if (passwordTxt.text?.isEmpty ?? true) {
             let alert = UIAlertController(title: "Password is empty", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default) { _  in
@@ -47,8 +44,8 @@ class LoginViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }
-        
-      
+
+
         if !isValidEmail(email: emailTxt.text!) {
             let alert = UIAlertController(title: "The email is invalid", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default) { _  in
@@ -59,8 +56,11 @@ class LoginViewController: UIViewController {
         }
         
         
-        if emailTxt.text == email  && passwordTxt.text == password {
+        let data = UserDefaultManager.retriveLoginData()
+       
+        if data.contains(where: { $0.email == emailTxt.text! && $0.password == passwordTxt.text! }) {
             LoginManager.login()
+            LoginManager.saveCurrentEmail(email: emailTxt.text!)
         } else {
             let alert = UIAlertController(title: "email or password is wrong", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)

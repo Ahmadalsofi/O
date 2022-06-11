@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +19,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if LoginManager.isLogin() {
             tabbar()
         }
+        
+        FirebaseApp.configure()
+        
+        print("____")
+
+        
+        //Optional("5DA8C495-21D5-48EC-B80F-6379F3177C19")
+        //  Optional("660914E6-9C87-4C44-8B39-4E142294CAE4")
+//        FavDefaultManager.create(post: FavModel(postID: "5DA8C495-21D5-48EC-B80F-6379F3177C19", email: "alsofiahmad@yahoo.com"))
+//        FavDefaultManager.create(post: FavModel(postID: "660914E6-9C87-4C44-8B39-4E142294CAE4", email: "alsofiahmad@yahoo.com"))
+
+      
+        
+        UserDefaultManager.retriveLoginData().forEach { item  in
+            print(item.email)
+            print(item.password)
+        }
+        
+        UserDefaultManager.update(oldEmail: "d@yahoo.com", email: "w", password: "1")
+        
+        UserDefaultManager.retriveLoginData().forEach { item  in
+            print(item.email)
+            print(item.password)
+        }
+        
+//        FavDefaultManager.remove(post: FavModel(postID: "5DA8C495-21D5-48EC-B80F-6379F3177C19", email: "alsofiahmad@yahoo.com"))
+//        print("NEW")
+//        FavDefaultManager.retrive().forEach { item  in
+//            print(item.postID)
+//        }
+        print("____")
+        
         return true
     }
     

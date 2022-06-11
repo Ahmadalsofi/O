@@ -18,8 +18,8 @@ class ReplyTableViewCell: UITableViewCell {
     }
 
     
-    func postSetup(obj: ReplyModel) {
-        bodyLbl.text = obj.body
+    func postSetup(obj: CommentModel) {
+        bodyLbl.text = obj.text
         
         let df = DateFormatter()
         df.dateFormat = "MM/dd hh:mm"

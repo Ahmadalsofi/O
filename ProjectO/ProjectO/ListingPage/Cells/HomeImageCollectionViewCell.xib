@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeImageCollectionViewCell" id="PgK-mK-hiD" customClass="HomeImageCollectionViewCell" customModule="ProjectO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="57" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uIi-ij-mHt">
+                <rect key="frame" x="0.0" y="0.0" width="57" height="46"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uh4-el-21M">
+                        <rect key="frame" x="2" y="2" width="53" height="42"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uh4-el-21M" secondAttribute="trailing" constant="2" id="9vJ-0E-85f"/>
+                    <constraint firstItem="uh4-el-21M" firstAttribute="leading" secondItem="uIi-ij-mHt" secondAttribute="leading" constant="2" id="daY-CI-6ss"/>
+                    <constraint firstAttribute="bottom" secondItem="uh4-el-21M" secondAttribute="bottom" constant="2" id="edD-uN-KID"/>
+                    <constraint firstItem="uh4-el-21M" firstAttribute="top" secondItem="uIi-ij-mHt" secondAttribute="top" constant="2" id="rA5-fn-Wf7"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="57" height="46"/>
+            <connections>
+                <outlet property="imageOutlet" destination="uh4-el-21M" id="Kbr-hE-cuB"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="-2.0089285714285712"/>
+        </collectionViewCell>
+    </objects>
+</document>

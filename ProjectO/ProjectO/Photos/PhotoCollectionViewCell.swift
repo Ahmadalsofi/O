@@ -9,9 +9,11 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var itemImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectedView.layer.cornerRadius = 6
         // Initialization code
     }
 

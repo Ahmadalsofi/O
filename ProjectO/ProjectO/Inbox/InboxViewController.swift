@@ -17,14 +17,20 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = inboxTitle
+        
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
-        self.tabBarItem.title = "Inbox"
+        self.tabBarItem.title = inboxTab
+        
         self.tabBarItem.image = UIImage(systemName: "tray")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +62,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MessagesViewController", sender: nil)
+        let vc = UIStoryboard.init(name: "InboxSB", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesViewController") as? MessagesViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

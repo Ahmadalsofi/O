@@ -33,6 +33,7 @@ class MessagesViewController: InputBarViewController, UITableViewDelegate, UITab
         tableView.alpha = 0
         tableView.delegate = self
         tableView.dataSource = self
+        self.title = "Messages"
         
         view.backgroundColor = .white
         inputBar.inputTextView.autocorrectionType = .no
@@ -42,13 +43,30 @@ class MessagesViewController: InputBarViewController, UITableViewDelegate, UITab
         autocompleteManager.register(prefix: "@", with: [.font: UIFont.preferredFont(forTextStyle: .body),.foregroundColor: UIColor.systemBlue,.backgroundColor: UIColor.systemBlue.withAlphaComponent(0.1)])
         autocompleteManager.register(prefix: "#", with: [.font: UIFont.boldSystemFont(ofSize: size)])
         inputBar.inputPlugins = [autocompleteManager]
+        
+        navigationController?.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.tabBarController?.tabBar.isHidden = true
+
     }
+
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         if oneTime {
             reload()
         }
         oneTime = false
+        self.navigationController?.tabBarController?.tabBar.isHidden = true
+
+        navigationController?.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     var oneTime: Bool = true
